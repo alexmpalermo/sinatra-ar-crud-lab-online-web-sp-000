@@ -2,8 +2,11 @@
 <form action="/articles/<%= @article.id %>" method="post">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
   <input type="text" name="article[title]" id="title" value="<%= @article.title %>" />
- <input type="text" name="article[content]" id="content" value="<%= @article.content %>" />
+  <input type="text" name="article[content]" id="content" value="<%= @article.content %>" />
  
+ <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete">
+   
   <input type="submit" id="submit" />
 </form>
   
