@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/articles' do
-    @article = Article.new(params[:title])
+    @article = Article.new(params[:name])
     @article.save
     redirect :'/articles/:id'
   end
